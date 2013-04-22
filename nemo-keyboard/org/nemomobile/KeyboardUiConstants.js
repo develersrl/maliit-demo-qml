@@ -31,14 +31,14 @@
 .pragma library
 
 var BG_COLOR = "black";
-var LANDSCAPE_WIDTH = 800;
-var LANDSCAPE_HEIGHT = 230;
+var LANDSCAPE_WIDTH = 1024;
+var LANDSCAPE_HEIGHT = 295;
 var PORTRAIT_WIDTH = 480;
 var PORTRAIT_HEIGHT = 320;
 
-var landscapeWidth = 78
-var landscapeHeight = 58
-var landscapeHorizontalPadding = 3
+var landscapeWidth = 99
+var landscapeHeight = 73
+var landscapeHorizontalPadding = 4
 var landscapeVerticalPadding = 6
 
 var portraitWidth = 47
