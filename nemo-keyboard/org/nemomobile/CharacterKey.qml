@@ -39,6 +39,7 @@ KeyBase  {
     property string captionShifted
     property string symView
     property string symView2
+    property string accents
     property string sizeType: "keyboard-key-43x60.png"
     property int fontSize: UI.FONT_SIZE
     property alias text: key_label.text

@@ -56,6 +56,13 @@ MouseArea {
         z: 10
         target: pressedKey
     }
+
+    AccentsPopper {
+        id: accentsPopper
+        z: 11
+        target: _pressAndHold ? pressedKey : null
+    }
+
     Timer {
         id: pressTimer
         interval: 500
@@ -80,12 +87,17 @@ MouseArea {
     /* Mouse handling */
     property int _startX
     property int _startY
+    property bool _pressAndHold: false
 
     onPressed: {
         _startX = mouse.x
         _startY = mouse.y
         pressTimer.start()
         updatePressedKey(mouse.x, mouse.y)
+    }
+
+    onPressAndHold: {
+        _pressAndHold = true
     }
 
     onPositionChanged: {
@@ -114,15 +126,29 @@ MouseArea {
         if (pressedKey === null)
             return
 
-        inputHandler._handleKeyClick()
+        if (_pressAndHold && accentsPopper.selectedChar) {
+            inputHandler._sendKeyClick(accentsPopper.selectedChar)
+        }
+        else {
+            inputHandler._handleKeyClick()
+        }
         pressedKey.clicked()
         inputHandler._handleKeyRelease()
 
+        _pressAndHold = false
         pressedKey.pressed = false
         pressedKey = null
     }
 
     function updatePressedKey(x, y) {
+        if (_pressAndHold) {
+            var c = keyboard.mapToItem(accentsPopper, x, y)
+            if (accentsPopper.contains(Qt.point(c.x, c.y))) {
+                accentsPopper._handleAccentSelection(c.x, c.y)
+                return
+            }
+        }
+
         var key = keyAt(x, y)
         if (pressedKey === key)
             return

@@ -73,6 +73,16 @@ Item {
         autorepeatTimer.stop()
     }
 
+    function _sendKeyClick(text) {
+        if (handleKeyClick())
+            return
+
+        var resetShift = !keyboard.layout.isShiftLocked
+        MInputMethodQuick.sendCommit(text)
+        if (resetShift)
+            keyboard.layout.isShifted = false
+    }
+
     function _handleKeyClick() {
         if (handleKeyClick())
             return

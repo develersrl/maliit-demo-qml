@@ -55,5 +55,6 @@ var FONT_SIZE = 28;
 var TEXT_COLOR = "white";
 var FONT_SIZE_POPPER = 56;
 var TEXT_COLOR_POPPER = "black";
+var TEXT_COLOR_POPPER_SELECTED = "mediumblue";
 
 var FLICK_CLOSE_DISTANCE = 60;
