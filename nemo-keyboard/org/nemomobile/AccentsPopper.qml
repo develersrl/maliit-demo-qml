@@ -67,9 +67,7 @@ Image {
                     id: text
                     anchors.centerIn: parent
                     text: popperText.text.charAt(index)
-                    font.family: "sans"
                     font.pixelSize: UI.FONT_SIZE_POPPER
-                    font.bold: true
                     color: itemIndex == popperText.selectedIndex ? UI.TEXT_COLOR_POPPER_SELECTED : UI.TEXT_COLOR_POPPER
                 }
             }

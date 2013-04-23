@@ -59,9 +59,7 @@ KeyBase  {
         anchors.centerIn: parent
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        font.family: "sans"
         font.pixelSize: fontSize
-        font.bold: true
         color: UI.TEXT_COLOR
         text: (inSymView && symView.length) > 0 ? (inSymView2 ? symView2 : symView)
                                                 : (isShifted ? captionShifted : caption)

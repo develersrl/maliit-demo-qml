@@ -89,9 +89,7 @@ KeyBase {
         anchors.horizontalCenterOffset: (leftPadding - rightPadding) / 2
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        font.family: "sans"
         font.pixelSize: fontSize
-        font.bold: true
         color: UI.TEXT_COLOR
         text: caption
     }

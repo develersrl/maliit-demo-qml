@@ -43,9 +43,7 @@ Image {
         anchors.centerIn: parent
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        font.family: "sans"
         font.pixelSize: UI.FONT_SIZE_POPPER
-        font.bold: true
         color: UI.TEXT_COLOR_POPPER
     }
 
