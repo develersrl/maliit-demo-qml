@@ -35,6 +35,7 @@ import com.meego.maliitquick 1.0
 MouseArea {
     id: keyboard
 
+    property bool disablePopper: false
     property Item layout
     property Item pressedKey
 
@@ -54,7 +55,8 @@ MouseArea {
     Popper {
         id: popper
         z: 10
-        target: pressedKey
+        target: disablePopper ? null : pressedKey
+        visible: !disablePopper
     }
 
     AccentsPopper {
