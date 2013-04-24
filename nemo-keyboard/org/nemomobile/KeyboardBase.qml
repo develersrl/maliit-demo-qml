@@ -77,7 +77,10 @@ MouseArea {
         }
         onFocusTargetChanged: {
             if (activeEditor) {
-                resetKeyboard()
+                // Quick & dirty solution to the caps problem: the maliit Qt/C++
+                // plugin always emit a focus changes, which in turn emit this signal.
+                // Commenting the resetKeyboard() invokation prevent losing the caps.
+                // resetKeyboard()
                 applyAutocaps()
             }
         }
