@@ -39,43 +39,19 @@ KeyBase {
     property string caption
     property int sourceWidth: -1
     property int sourceHeight: -1
+    property bool isSelected: pressed
 
-    opacity: pressed ? 0.6 : 1.0
     showPopper: false
 
     Image {
-        id: leftBit
-        source: (landscape) ? "meegotouch-keyboard-function-key-left-landscape.png"
-                            : "meegotouch-keyboard-function-key-left.png"
-        anchors {
-            left: parent.left
-            leftMargin: leftPadding
-            top: parent.top
-            topMargin: topPadding
-        }
+        source: isSelected ? "speciale_premuto.png" : "speciale.png"
+        anchors.fill: parent
+        anchors.leftMargin: leftPadding
+        anchors.rightMargin: rightPadding
+        anchors.topMargin: topPadding
+        anchors.bottomMargin: bottomPadding
     }
-    Image {
-        id: midBit
-        source: (landscape) ? "meegotouch-keyboard-function-key-mid-landscape.png"
-                            : "meegotouch-keyboard-function-key-mid.png"
-        anchors {
-            left: leftBit.right
-            right: rightBit.left
-            top: parent.top
-            topMargin: topPadding
-        }
-    }
-    Image {
-        id: rightBit
-        source: (landscape) ? "meegotouch-keyboard-function-key-right-landscape.png"
-                            : "meegotouch-keyboard-function-key-right.png"
-        anchors {
-            top: parent.top
-            topMargin: topPadding
-            right: parent.right
-            rightMargin: rightPadding
-        }
-    }
+
     Image {
         anchors.centerIn: parent
         anchors.horizontalCenterOffset: (leftPadding - rightPadding) / 2
@@ -90,7 +66,7 @@ KeyBase {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         font.pixelSize: fontSize
-        color: UI.TEXT_COLOR
+        color: UI.SPECIAL_TEXT_COLOR
         text: caption
     }
 }

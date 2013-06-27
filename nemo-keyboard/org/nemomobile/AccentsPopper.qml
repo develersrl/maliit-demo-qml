@@ -31,11 +31,16 @@
 import QtQuick 2.0
 import "KeyboardUiConstants.js" as UI
 
-Image {
+BorderImage {
     id: popper
-    source: "popper.png"
+    source: "tasto.png"
     opacity: 0
     width: popperText.width + 40
+    border.bottom: 6
+    border.left: 6
+    border.right: 6
+    border.top: 6
+
     property Item target: null
     property string selectedChar: ""
 

@@ -62,7 +62,8 @@ Column {
         Repeater {
             model: row1
             LandscapeCharacterKey {
-                sizeType: "keyboard-key-72x46.png"
+                sizeType: "tasto.png"
+                pressedImage: "tasto_premuto.png"
                 caption: row1[index][0]
                 captionShifted: row1[index][0].toUpperCase()
                 symView: row1[index][1]
@@ -78,7 +79,8 @@ Column {
         Repeater {
             model: row2
             LandscapeCharacterKey {
-                sizeType: "keyboard-key-72x46.png"
+                sizeType: "tasto.png"
+                pressedImage: "tasto_premuto.png"
                 caption: row2[index][0]
                 captionShifted: row2[index][0].toUpperCase()
                 symView: row2[index][1]
@@ -92,18 +94,20 @@ Column {
         anchors.horizontalCenter: parent.horizontalCenter
 
         ShiftKey {
-            width: 110
+            width: 145
             height: keyHeight
             topPadding: keyArea.topPadding
             leftPadding: keyArea.leftPadding
             rightPadding: keyArea.rightPadding
+            bottomPadding: keyArea.bottomPadding
             landscape: true
         }
 
         Repeater {
             model: row3
             LandscapeCharacterKey {
-                sizeType: "keyboard-key-72x46.png"
+                sizeType: "tasto.png"
+                pressedImage: "tasto_premuto.png"
                 caption: row3[index][0]
                 captionShifted: row3[index][0].toUpperCase()
                 symView: row3[index][1]
@@ -113,11 +117,13 @@ Column {
         }
 
         BackspaceKey {
-            width: 120
+            width: 145
             height: keyHeight
             topPadding: keyArea.topPadding
             leftPadding: keyArea.leftPadding
-            rightPadding: keyArea.rightPadding + 10
+            rightPadding: keyArea.rightPadding
+            bottomPadding: keyArea.bottomPadding
+
             landscape: true
         }
     } //end Row3
@@ -132,34 +138,39 @@ Column {
             topPadding: keyArea.topPadding
             leftPadding: keyArea.leftPadding
             rightPadding: keyArea.rightPadding
+            bottomPadding: keyArea.bottomPadding
         }
 
         LandscapeCharacterKey {
-            width: 120
             caption: ","
             captionShifted: ","
-            sizeType: "keyboard-key-120x46.png"
+            sizeType: "tasto.png"
+            pressedImage: "tasto_premuto.png"
         }
+
         LandscapeCharacterKey {
-            width: 228
+            width: 480
             caption: " "
             captionShifted: " "
             showPopper: false
-            sizeType: "keyboard-key-228x46.png"
+            sizeType: "spazio.png"
+            pressedImage: "spazio_premuto.png"
         }
+
         LandscapeCharacterKey {
-            width: 120
             caption: "."
             captionShifted: "."
-            sizeType: "keyboard-key-120x46.png"
+            sizeType: "tasto.png"
+            pressedImage: "tasto_premuto.png"
         }
 
         EnterKey {
-            width: 155
+            width: 145
             height: keyHeight
             topPadding: keyArea.topPadding
             leftPadding: keyArea.leftPadding
-            rightPadding: keyArea.rightPadding + 10
+            rightPadding: keyArea.rightPadding
+            bottomPadding: keyArea.bottomPadding
             landscape: true
         }
     } //end Row4

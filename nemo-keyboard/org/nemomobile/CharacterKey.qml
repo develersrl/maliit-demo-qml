@@ -41,12 +41,12 @@ KeyBase  {
     property string symView2
     property string accents
     property string sizeType: "keyboard-key-43x60.png"
+    property url pressedImage
     property int fontSize: UI.FONT_SIZE
     property alias text: key_label.text
 
     Image {
-        source: sizeType
-        opacity: pressed ? 0.5 : 1
+        source: pressed ? pressedImage : sizeType
         anchors.fill: parent
         anchors.leftMargin: leftPadding
         anchors.rightMargin: rightPadding

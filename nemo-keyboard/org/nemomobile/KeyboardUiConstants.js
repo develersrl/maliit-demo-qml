@@ -30,16 +30,16 @@
 
 .pragma library
 
-var BG_COLOR = "black";
+var BG_COLOR = "#E3E5E9";
 var LANDSCAPE_WIDTH = 1024;
 var LANDSCAPE_HEIGHT = 295;
 var PORTRAIT_WIDTH = 480;
 var PORTRAIT_HEIGHT = 320;
 
-var landscapeWidth = 99
+var landscapeWidth = 96
 var landscapeHeight = 73
-var landscapeHorizontalPadding = 4
-var landscapeVerticalPadding = 6
+var landscapeHorizontalPadding = 7
+var landscapeVerticalPadding = 7
 
 var portraitWidth = 47
 var portraitHeight = 80
@@ -51,10 +51,11 @@ var PORTRAIT_OTT_WIDTH = 88;
 var PORTRAIT_SHIFT_WIDTH = 62
 var FONT_SIZE_RUSSIAN = 18;
 
-var FONT_SIZE = 28;
-var TEXT_COLOR = "white";
-var FONT_SIZE_POPPER = 56;
-var TEXT_COLOR_POPPER = "black";
-var TEXT_COLOR_POPPER_SELECTED = "mediumblue";
+var FONT_SIZE = 30;
+var TEXT_COLOR = "#333333";
+var SPECIAL_TEXT_COLOR = "white";
+var FONT_SIZE_POPPER = 30;
+var TEXT_COLOR_POPPER = "#333333";
+var TEXT_COLOR_POPPER_SELECTED = "#0053CD";
 
 var FLICK_CLOSE_DISTANCE = 60;

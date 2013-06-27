@@ -32,13 +32,12 @@
 import QtQuick 2.0
 
 FunctionKey {
-    icon: inSymView ? ""
-                    : (isShiftLocked) ? "icon-m-input-methods-capslock.svg"
-                                      : (isShifted) ? "icon-m-input-methods-shift-uppercase.svg"
-                                                    : "icon-m-input-methods-shift-lowercase.svg"
+    icon: inSymView ? "" : "keyboard_icon_uppercase.png"
 
     caption: inSymView ? (inSymView2 ? "2/2" : "1/2") : ""
+    isSelected: pressed || isShiftLocked
     key: Qt.Key_Shift
+
     onClicked: {
         if (inSymView) {
             inSymView2 = !inSymView2

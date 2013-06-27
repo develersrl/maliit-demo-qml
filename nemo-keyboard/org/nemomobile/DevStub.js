@@ -48,5 +48,5 @@ function userHide() {
 }
 
 var actionKeyOverride = {};
-actionKeyOverride.icon = "icon-m-input-methods-enter.svg"
+actionKeyOverride.icon = "keyboard_icon_enter.png"
 actionKeyOverride.label = "" // Or this one, but then disable the icon "Enter"

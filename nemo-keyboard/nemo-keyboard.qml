@@ -86,6 +86,7 @@ Item {
 
         KeyboardBase {
             id: keyboard
+            disablePopper: true
             layout: root.landscape ? vkb_landscape : vkb_portrait
             width: layout ? layout.width : 0
             height: layout ? layout.height : 0
@@ -163,7 +164,7 @@ Item {
         }
 
         Component.onCompleted: {
-            MInputMethodQuick.actionKeyOverride.setDefaultIcon("icon-m-input-methods-enter.svg")
+            MInputMethodQuick.actionKeyOverride.setDefaultIcon("keyboard_icon_enter.png")
             MInputMethodQuick.actionKeyOverride.setDefaultLabel("")
         }
     }
