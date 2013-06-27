@@ -34,6 +34,7 @@ import org.nemomobile 1.0
 
 Item {
     id: canvas
+    property real keyboardY: root.mapToItem(null, 0, keyboard.y).y
 
     width: MInputMethodQuick.screenWidth
     height: MInputMethodQuick.screenHeight
