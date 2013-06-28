@@ -38,8 +38,8 @@ var PORTRAIT_HEIGHT = 320;
 
 var landscapeWidth = 96
 var landscapeHeight = 73
-var landscapeHorizontalPadding = 7
-var landscapeVerticalPadding = 7
+var landscapeHorizontalPadding = 5
+var landscapeVerticalPadding = 5
 
 var portraitWidth = 47
 var portraitHeight = 80
